@@ -7,7 +7,7 @@ Sigue estos paso
 Despues de que instalastes las dependencia para que pueda ejecutar esta app y corre 
 ahora puede clonar el repositorio y navegar un proyecto que estoy realizando.
 
-"""bash
+```bash
 git clone git@github.com:ISEATO-JR/personalProyect.git
-"""
+```
 
