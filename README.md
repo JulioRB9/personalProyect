@@ -1,5 +1,5 @@
 # Proyecto Personal
-> :memo: Requesito 
+> :memo: Requesito
 Para ejecutar la **APP**
 Sigue estos paso
 [Link](https://github.com/ISEATO-JR/Labs-SpeedTest/blob/main/Notas.txt)
