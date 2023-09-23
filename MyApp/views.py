@@ -1,13 +1,27 @@
 from django.http import HttpResponse
+from django.template import Template, Context
+
 import datetime
 
-def saludos(request): # Funcion primera vista
-    documento = """
-    <htmlt>
-    <body>
-    <h1>Hola Alumnos estes es nuetra pagina de Django</h1>
-    </body>
-    </htmlt> """
+class Persona(object):
+    def __init__(self,nombre,apellido):
+        self.nombre_Persona = nombre
+        self.apellido_Persona = apellido
+        
+
+def viewHtml(request): # Funcion primera vista
+
+    p1 = Persona("Julio", "Rivera Bautista")
+    # nombre_Persona = "Julio"
+    # apellido_Persona = "Rivera Bautista"
+    fechaActual = datetime.datetime.now()
+    doc_externo = open("/home/jrb/Documents/personalProyect/plantilla/miplantilla.html")
+    plt = Template(doc_externo.read())
+    doc_externo.close()
+    ctx = Context({"nombre":p1.nombre_Persona, "apellido":p1.apellido_Persona, "fecha":fechaActual})
+
+    documento = plt.render(ctx)
+    
     return HttpResponse(documento)
 
 def despedida(request):
