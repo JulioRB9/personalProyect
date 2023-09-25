@@ -54,7 +54,7 @@ ROOT_URLCONF = 'MyApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/home/jrb/Documents/personalProyect/plantilla'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.template import Template, Context
+from django.template.loader import get_template
 
 import datetime
 
@@ -16,12 +17,13 @@ def viewHtml(request): # Funcion primera vista
     # nombre_Persona = "Julio"
     # apellido_Persona = "Rivera Bautista"
     fechaActual = datetime.datetime.now()
-    doc_externo = open("/home/jrb/Documents/personalProyect/plantilla/miplantilla.html")
-    plt = Template(doc_externo.read())
-    doc_externo.close()
-    ctx = Context({"nombreVista":p1.nombre_Persona, "apellido":p1.apellido_Persona, "fecha":fechaActual,"temas":temas})
-
-    documento = plt.render(ctx)
+    # doc_externo = open("/home/jrb/Documents/personalProyect/plantilla/miplantilla.html")
+    # plt = Template(doc_externo.read())
+    # doc_externo.close()
+    # ctx = Context({"nombreVista":p1.nombre_Persona, "apellido":p1.apellido_Persona, "fecha":fechaActual,"temas":temas})
+    
+    doc_externo = get_template("miplantilla.html")
+    documento = doc_externo.render({"nombreVista":p1.nombre_Persona, "apellido":p1.apellido_Persona, "fecha":fechaActual,"temas":temas})
     
     return HttpResponse(documento)
 
