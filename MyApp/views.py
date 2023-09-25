@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.template import Template, Context
 from django.template.loader import get_template
+from django.shortcuts import render
 
 import datetime
 
@@ -22,10 +23,11 @@ def viewHtml(request): # Funcion primera vista
     # doc_externo.close()
     # ctx = Context({"nombreVista":p1.nombre_Persona, "apellido":p1.apellido_Persona, "fecha":fechaActual,"temas":temas})
     
-    doc_externo = get_template("miplantilla.html")
-    documento = doc_externo.render({"nombreVista":p1.nombre_Persona, "apellido":p1.apellido_Persona, "fecha":fechaActual,"temas":temas})
+    # doc_externo = get_template("miplantilla.html")
+    # documento = doc_externo.render({"nombreVista":p1.nombre_Persona, "apellido":p1.apellido_Persona, "fecha":fechaActual,"temas":temas})
+    # return HttpResponse(documento)
+    return render(request, "miplantilla.html",{"nombreVista":p1.nombre_Persona, "apellido":p1.apellido_Persona, "fecha":fechaActual,"temas":temas})
     
-    return HttpResponse(documento)
 
 def despedida(request):
     return HttpResponse("Hasta Luego amigos....!")
