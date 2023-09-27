@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.template import Template, Context
-from django.template.loader import get_template
-from django.shortcuts import render
+from django.template.loader import get_template  # metodo para usar renderizar html y otros
+from django.shortcuts import render             # metodo para usar renderizar html y otros
 
 import datetime
 
@@ -40,7 +40,7 @@ def viewHtml(request): # Funcion primera vista
 #  Entre otros que estaremos incluinendo en el apartado.
 def primeraVista(request):
     fechaActual = datetime.datetime.now()
-    
+
     return render(request,"testDev.html",{"dameFecha":fechaActual})
 
 # Segunda vista personalizada para el navegador

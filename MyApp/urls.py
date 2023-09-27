@@ -20,7 +20,7 @@ from MyApp.views import viewHtml, despedida, dameFecha,calculaEdad, primeraVista
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('PrimerVistaHtml/',viewHtml),
+    path('PrimerVista/',viewHtml),
     path('SegundaVista/',despedida),
     path('VitaFecha/',dameFecha),
     path('edad/<int:edad>/<int:agno>',calculaEdad),
