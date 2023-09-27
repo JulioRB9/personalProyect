@@ -29,7 +29,15 @@ def viewHtml(request): # Funcion primera vista
     return render(request, "miplantilla.html",{"nombreVista":p1.nombre_Persona, "apellido":p1.apellido_Persona, "fecha":fechaActual,"temas":temas})
     
 # -------------------------------------------------------------------------------------------#
-# Creando vista personalizada la el navegador
+# Creando vista personalizada para el navegador
+# Estrutura:
+# El menu principal sen encuentra en la carpeta fisrtDEV mNavegacion.html desglozando 
+# con la pagina principal que es la base.html, puedes renombrarlo como index.html
+# contendra todo el contendio de los otras paginas
+#  Ejemplo :
+# testDEV.html
+# blog.html
+#  Entre otros que estaremos incluinendo en el apartado.
 def primeraVista(request):
     fechaActual = datetime.datetime.now()
     
