@@ -28,6 +28,19 @@ def viewHtml(request): # Funcion primera vista
     # return HttpResponse(documento)
     return render(request, "miplantilla.html",{"nombreVista":p1.nombre_Persona, "apellido":p1.apellido_Persona, "fecha":fechaActual,"temas":temas})
     
+# -------------------------------------------------------------------------------------------#
+# Creando vista personalizada la el navegador
+def primeraVista(request):
+    fechaActual = datetime.datetime.now()
+    
+    return render(request,"testDev.html",{"dameFecha":fechaActual})
+
+# Segunda vista personalizada para el navegador
+def segundaVista(request):
+    fechaActual = datetime.datetime.now()
+    return render(request,"blog.html",{"dameFecha":fechaActual})
+
+# -------------------------------------------------------------------------------------------#
 
 def despedida(request):
     return HttpResponse("Hasta Luego amigos....!")
