@@ -10,4 +10,7 @@ ahora puede clonar el repositorio y navegar un proyecto que estoy realizando.
 ```bash
 git clone git@github.com:ISEATO-JR/personalProyect.git
 ```
-
+## Requesito
+```bash
+pip install psycopg3
+```
