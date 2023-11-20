@@ -81,6 +81,12 @@ WSGI_APPLICATION = 'TiendaOnline.wsgi.application'
 #     }
 # }
 
+# Paso para instalar postgres para gestor de base de datos para lanzar este proyecto
+# https://wiki.postgresql.org/wiki/Apt
+# https://www.pgadmin.org/download/pgadmin-4-apt/
+# http://support.ptc.com/help/thingworx_hc/thingworx_8_hc/es/index.html#page/ThingWorx%2FHelp%2FInstallation%2FInstallation%2Finstall_and_configure_postgresql_Ubuntu.html%23
+# sudo -u postgres psql -c "ALTER ROLE postgres WITH password 'iseatosql'"
+
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.postgresql',
