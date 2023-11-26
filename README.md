@@ -1,4 +1,4 @@
-# Proyecto Personal
+# Proyecto personal
 > :memo: Requesito
 Para ejecutar la **APP**
 Sigue estos paso
