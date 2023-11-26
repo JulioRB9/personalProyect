@@ -1,3 +1,6 @@
+# Necesario que se instale los paquetes
+# con el respectivos versiones como indica el archivo de texto
+
 asgiref==3.7.2
 Django==4.2.7
 psycopg==3.1.13
