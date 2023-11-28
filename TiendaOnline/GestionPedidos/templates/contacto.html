@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busqueda de producto</title>
+    <title>Document</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,7 +27,7 @@
 
         form {
             margin: 2em 0;
-            text-align: center;
+            text-align: left;
         }
 
         input[type="text"] {
@@ -51,26 +51,16 @@
     </style>
 </head>
 <body>
-    <!-- <h1>Bienvenido</h1>
-    <form action="/buscar/" method="GET">
-        <input type="text" name="producto">
-        <input type="submit" value="Buscar">
-    </form> -->
-
-    <!-- <h2 >Búsqueda</h2> -->
-
-    <!-- <form action="/buscar/" method="GET">
-        <label for="busqueda">Buscar:</label>
-        <input type="text" id="busqueda" name="producto" placeholder="Ingrese su búsqueda" required>
-        <button type="submit" value="buscar">Buscar</button> -->
-
         <div class="container">
             <header>
-                <h1>Busca producto</h1>
+                <h1>Contacto</h1>
             </header>
-            <form action="/buscar/" method="GET">
-                <input type="text" name="producto" placeholder="Buscar...">
-                <input type="submit" value="Buscar">
+            <form action="/contacto/" method="POST">{% csrf_token %}
+                {{ form.as_p }}
+                <p>Asunto:<input type="text" name="asunto" placeholder="Asunto"></p>
+                <p>Email:<input type="email" name="email" placeholder="email"></p>
+                <p>Mensaje:<textarea name="mensaje" cols="30" rows="10"></textarea></p>
+                <input type="submit" value="Enviar">
             </form>
         </div>
 </body>
