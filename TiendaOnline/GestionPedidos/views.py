@@ -35,22 +35,22 @@ def buscar(request):
 # Vista contacto
 def contacto(request):
     if request.method == "POST":
-    #     subject =  request.POST["asunto"]
-    #     menssage = request.POST["mensaje"] + " " + request.POST["email"]
-    #     email_from = settings.EMAIL_HOST_USER
-    #     recipient_list = ["inventarios.2023@outlook.com"]
-    #     send_mail(subject,menssage,email_from,recipient_list)
-    #     return render(request,"gracias.html")
+        subject =  request.POST["asunto"]
+        menssage = request.POST["mensaje"] + " " + request.POST["email"]
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = ["inventarios.2023@outlook.com"]
+        send_mail(subject,menssage,email_from,recipient_list)
+        return render(request,"gracias.html")
     
-    # return render(request, "contacto.html")
-        miFormulario = FormularioContacto(request.POST)
-        if miFormulario.is_valid():
-            infFormulario = miFormulario.cleaned_data
-            send_mail(infFormulario['asunto'],
-                    infFormulario['mensaje'],
-                    infFormulario.get('email',''),
-                    ['inventarios.2023@outlook.com'],)
-            return render(request,"gracias.html")
-    else:
-        miFormulario = FormularioContacto()
-    return render(request, "formCont.html",{"form":miFormulario})
+    return render(request, "contacto.html")
+    #     miFormulario = FormularioContacto(request.POST)
+    #     if miFormulario.is_valid():
+    #         infFormulario = miFormulario.cleaned_data
+    #         send_mail(infFormulario['asunto'],
+    #                 infFormulario['mensaje'],
+    #                 infFormulario.get('email',''),
+    #                 ['inventarios.2023@outlook.com'],)
+    #         return render(request,"gracias.html")
+    # else:
+    #     miFormulario = FormularioContacto()
+    # return render(request, "formCont.html",{"form":miFormulario})
