@@ -4,15 +4,15 @@ from GestionPedidos.models import Articulo
 from django.core.mail import send_mail
 from django.conf import settings
 from GestionPedidos.forms import FormularioContacto
-from django.views.decorators.csrf import requires_csrf_token
+# from django.views.decorators.csrf import requires_csrf_token
 
 
 # Create your views here.
 def buscarProductos(request):
-    return render(request, "buscar.html")
+    return render(request, "buscar.html")   
 
 # Mensaje del servidor conceptual
-@requires_csrf_token
+# @requires_csrf_token
 def buscar(request):
     c = {}
     if request.GET["producto"]:
@@ -53,4 +53,4 @@ def contacto(request):
             return render(request,"gracias.html")
     else:
         miFormulario = FormularioContacto()
-    return render(request, "formCont.html",c,{"form":miFormulario})
+    return render(request, "formCont.html",{"form":miFormulario})
