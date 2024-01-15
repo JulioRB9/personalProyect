@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -49,13 +43,17 @@
             background-color: #45a049;
         }
     </style>
-</head>
-<body>
+
+    {% extends "ProyectoWebApp/base.html" %}
+
+    {% load static %}
+    
+    
+    {% block content %}
         <div class="container">
             <header>
                 <h1>Blog</h1>
             </header>
        
         </div>
-</body>
-</html>
+    {% endblock %}
