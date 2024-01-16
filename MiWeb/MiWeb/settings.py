@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# Registra todos las aplicaicones que crearemos adelante
 
 INSTALLED_APPS = [
     'django.contrib.admin',
