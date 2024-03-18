@@ -18,11 +18,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+# Este es la aplicacion principal donde se va registrar todo las aplicaciones que estemos creando 
+# en la applicacion
+
 # Enlazar todas las vistas de nuetras aplicacion
 # Ingrediente
 # NombreAPPmain + NombreProyecto.urls -> contendra todas las vistas del nuestro aplicacion del proyecto
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('servicios/', include('servicios.urls')),
     path('',include('ProyectoWebApp.urls')),
 ]
 
