@@ -31,8 +31,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-# Registra todos las aplicaicones que crearemos adelante
-
+# Registra todos las aplicaciones que se creara en nuestro proyecto
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ProyectoWebApp',
     'servicios',
+    'blog',
 ]
 
 MIDDLEWARE = [
