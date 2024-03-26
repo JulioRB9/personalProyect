@@ -13,7 +13,8 @@ class categorias(models.Model):
 
     def __str__(self):
         return self.nombre
-
+# El name de la class es la que se va importar en las views y que 
+# ligaremos en la URL
 class Post(models.Model):
     titulo = models.CharField(max_length = 50)
     contenido = models.CharField(max_length = 50)

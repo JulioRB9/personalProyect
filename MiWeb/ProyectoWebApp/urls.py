@@ -7,7 +7,6 @@ from django.conf.urls.static import static #Agregar la configuracion de los arch
 urlpatterns = [
     path('',views.inicio, name="Inicio" ),
     path('tienda/',views.tienda, name="Tienda" ),
-    path('blog/',views.blog, name="Blog" ),
     path('contacto/',views.contacto, name="Contacto" ),
 ]
 

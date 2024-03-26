@@ -15,8 +15,8 @@ def tienda(request):
     return render(request, 'ProyectoWebApp/tienda.html')
 
 # Create your views here.
-def blog(request):
-    return render(request, 'ProyectoWebApp/blog.html')
+# def blog(request):
+#     return render(request, 'ProyectoWebApp/blog.html')
 
 # Create your views here.
 def contacto(request):
