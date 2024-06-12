@@ -14,7 +14,7 @@ Despues de que instalastes las dependencia para que pueda ejecutar corre el proy
 ahora puede clonar el repositorio y navegar un proyecto que estoy realizando.
 
 ```bash
-git clone git@github.com:ISEATO-JR/personalProyect.git
+git@github.com:JulioRB9/personalProyect.git
 ```
 
 [Colaboracion](https://excalidraw.com/#room=140036f3d08e8acfa677,hNcW58CYI7mqX2RKzsp7gw)
