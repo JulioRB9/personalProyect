@@ -122,8 +122,8 @@ USE_TZ = True
 # Seccion de configuracion donde se va cargar los archivos multimedia 
 # cuando se va cargar cuando creamos un servicios
 STATIC_URL = 'static/'
-MEDIA_URL= '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL= '/media/'                           # Carpeta Publica
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   # Ruta donde lo va buscar
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
