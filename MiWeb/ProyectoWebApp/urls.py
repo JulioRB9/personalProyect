@@ -1,6 +1,7 @@
 # URLS de proyecto principal
 from django.urls import path      # Path para importar la APP
-from ProyectoWebApp import views  # importar las vistas de la aplicacion
+from ProyectoWebApp import views  # importar
+
 from django.conf import settings  # Agregar la URL de los archivos de configuracion setting
 from django.conf.urls.static import static #Agregar la configuracion de los archivos estaticos
 
