@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import categorias, Post # Importar el modelo de aplicacions 
 
 # Register your models here.
+#Construir panel de administracion
 class CategoriasAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
 
