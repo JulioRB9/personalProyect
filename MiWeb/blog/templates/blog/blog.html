@@ -54,27 +54,41 @@
 
     {% for vistaBlog in post %}
 
-    <section class="page-section clearfix">
-        <div class="container">
-            <div class="intro">
+        <section class="page-section clearfix">
+            <div class="container">
+                <div class="intro">
 
-                {% if vistaBlog.imagen %}
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{vistaBlog.imagen.url}}" alt="{{ vistaBlog.titulo }}" style="width: 50%;">
-                {% else %}
-                    <img src="/media/blog/default_image.png" alt="Imagen por defecto">
-                {% endif %}
+                    {% if vistaBlog.imagen %}
+                        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{vistaBlog.imagen.url}}" alt="{{ vistaBlog.titulo }}" style="width: 50%;">
+                    {% else %}
+                        <img src="/media/blog/default_image.png" alt="Imagen por defecto">
+                    {% endif %}
 
-                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                    <h2 class="section-heading mb-4" >
-                        <span class="section-heading-lower">{{vistaBlog.titulo}}</span>
-                        <span class="section-heading-upper">{{vistaBlog.contenido}}</span>
-                    </h2>
-
+                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                        <h2 class="section-heading mb-4" >
+                            <span class="section-heading-lower">{{vistaBlog.titulo}}</span>
+                            <span class="section-heading-upper">{{vistaBlog.contenido}}</span>
+                        </h2>
+                        <div style="text-align:left;">
+                            Autor: {{vistaBlog.autor}}
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
 
-{% endfor %}
+    {% endfor %}
+
+    <setion>
+        <div style="width:75%; margin: auto; text-align:center; color: white;">
+            Categorias: 
+                {% for vistaBlog in post %}
+                    {% for consultaQuery in vistaBlog.categorias.all %}
+                        {{consultaQuery.nombre}} 
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </section>
 
 {% endblock %}
