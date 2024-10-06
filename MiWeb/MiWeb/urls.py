@@ -24,10 +24,14 @@ from django.urls import path,include
 # Enlazar todas las vistas de nuetras aplicacion
 # Ingrediente
 # NombreAPPmain + NombreProyecto.urls -> contendra todas las vistas del nuestro aplicacion del proyecto
+
+# 01 - Aplicacion servicios
+# 02 - Aplicacion Blog
+# 00 - Aplicacion vista Principal 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('servicios/', include('servicios.urls')),
-    path('blog/', include('blog.urls')),
+    path('blog/', include('blog.urls')), 
     path('',include('ProyectoWebApp.urls')),
 ]
 

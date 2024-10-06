@@ -1,73 +1,80 @@
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            overflow: hidden;
-        }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
 
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
+    header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em 0;
+    }
 
-        form {
-            margin: 2em 0;
-            text-align: left;
-        }
+    form {
+        margin: 2em 0;
+        text-align: left;
+    }
 
-        input[type="text"] {
-            padding: 0.5em;
-            width: 60%;
-            margin-right: 1em;
-            box-sizing: border-box;
-        }
+    input[type="text"] {
+        padding: 0.5em;
+        width: 60%;
+        margin-right: 1em;
+        box-sizing: border-box;
+    }
 
-        input[type="submit"] {
-            padding: 0.5em 2em;
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+    input[type="submit"] {
+        padding: 0.5em 2em;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
 
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+{% extends "ProyectoWebApp/base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <header>
+            <h1>Desarrollo de blog</h1>
+        </header>
+    </div>
 
-    {% extends "ProyectoWebApp/base.html" %}
-    {% load static %}
-    {% block content %}
+    {% for vistaBlog in post %}
 
+    <section class="page-section clearfix">
         <div class="container">
-            <header>
-                <h1>Blog</h1>
-            </header>   
-        </div>
+            <div class="intro">
 
-        {% for viewaServicio in post %}
-        <section class="page-section clearfix">
-            <div class="container">
-                <div div class="intro">
-                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{viewaServicio.img.url}}" alt="" style="width: 50%;">
+                {% if vistaBlog.imagen %}
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{vistaBlog.imagen.url}}" alt="{{ vistaBlog.titulo }}" style="width: 50%;">
+                {% else %}
+                    <img src="/media/blog/default_image.png" alt="Imagen por defecto">
+                {% endif %}
+
                 <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                <h2 class="section-heading mb-4" >
-                    <span class="section-heading-lower">{{viewaServicio.titulo}}</span>
-                    <span class="section-heading-upper">{{viewaServicio.contenido}}</span>
-                </h2>                 
+                    <h2 class="section-heading mb-4" >
+                        <span class="section-heading-lower">{{vistaBlog.titulo}}</span>
+                        <span class="section-heading-upper">{{vistaBlog.contenido}}</span>
+                    </h2>
+
                 </div>
             </div>
-            </div>
-        </section>
-        {% endfor %}
-        
-    {% endblock %}
+        </div>
+    </section>
+
+{% endfor %}
+
+{% endblock %}
