@@ -79,16 +79,16 @@
         
 
     {% endfor %}
-
+<!--
     <setion>
         <div style="width:75%; margin: auto; text-align:center; color: white;">
             Categorias: 
                 {% for vistaBlog in Post %}
                     {% for consultaQuery in vistaBlog.categorias.all %}
-                    <a href="{% url 'categoria' consultaQuery.id %}" linksCategorias="linksCategorias"> {{consultaQuery.nombre}} </a>
+                    <a href="{% url 'categoria' consultaQuery.id %}"> {{consultaQuery.nombre}} </a>
                     {% endfor %}
                 {% endfor %}
             </div>
         </section>
-
+-->
 {% endblock %}

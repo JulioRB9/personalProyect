@@ -287,3 +287,8 @@ ul.errorlist{
   font-style: italic;
   color: red;
 }
+
+.linksCategorias {
+  color: #ffffff !important;
+  text-decoration: unset;
+}
